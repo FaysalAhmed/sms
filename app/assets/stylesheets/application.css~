@@ -12,7 +12,7 @@
  *= require_tree .
  */
 #product_list{
-width:960pi;
+width:960px;
 margin:0 auto;
 background: #999;
 }

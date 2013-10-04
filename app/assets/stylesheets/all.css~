@@ -1,0 +1,10 @@
+*body{
+	background: #ccc !important;
+	}
+
+#product_list{
+width:960px;
+margin:0 auto;
+background: #fff;
+}
+
