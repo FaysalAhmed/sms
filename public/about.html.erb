@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HSTU Books Online Store</title>
+<%= stylesheet_link_tag "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tag %>
+</head>
+<body class="<%= controller.controller_name %>">
+<div id="banner">
+<%= @page_title || "HSTU Books Store Online" %>
+</div>
+
+<div id="nav">
+<ul>
+<li><a href="http://www....">All Books</a></li>
+<li><a href="http://www..../faq">About Me</a></li>
+<li><a href="http://www..../news">Blog and News</a></li>
+<li><a href="http://www..../contact">Contact Me</a></li>
+</ul>
+</div>
+
+<div id="columns">
+    <div id="side">
+     <div id="cart">
+       <% if @cart %>
+           <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+           <%= render @cart %>
+          <% end %>
+       <% end %>
+    </div>
+    <div class="add">
+    
+    <%= image_tag("images1.jpeg", :alt => "rss feed") %>
+    <%= image_tag("images2.jpeg", :alt => "rss feed") %>
+    <%= image_tag("images4.jpeg", :alt => "rss feed") %>
+      
+    </div>
+
+
+
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+</div>
+<div id="footer">
+ <p>Copyright © 2013 AnarySoftBD. All Rights Reserved </p>
+</div>
+</body>
+</html>
+

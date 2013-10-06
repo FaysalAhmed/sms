@@ -43,3 +43,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+#START_HIGHLIGHT
+ gem 'bootstrap-sass', '2.3.0.1'
+ gem 'will_paginate', '3.0.4'
+ gem 'bootstrap-will_paginate', '0.0.9'
+#END_HIGHLIGHT

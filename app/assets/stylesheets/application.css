@@ -1,18 +1,202 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-#product_list{
-width:960pi;
-margin:0 auto;
-background: #999;
+/* Global styles */
+body{
+background-image: url(../images/back_header.png);	
+background-repeat: repeat-x;
+	}
+
+#store .entry form, #store .entry form div {
+display: inline;
 }
+
+#store #notice {
+        color: #000;
+        border: 2px solid red;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: #f0f0f0;
+        font: bold smaller sans-serif;
+}
+
+
+#store h1 {
+        font:  150% sans-serif;
+        color: #226;
+        border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+
+#product_list table {
+        border-collapse: collapse;
+}
+
+#product_list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#product_list .list_image {
+  width:        60px;
+  height:       70px;
+}
+
+#product_list .list_description {
+  width:        60%;
+}
+
+#product_list .list_description dl {
+        margin: 0;
+}
+
+#product_list .list_description dt {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+#product_list .list_description dd {
+        margin: 0;
+}
+
+#product_list .list_actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#product_list .list_line_even {
+  background:   #e0f8f8;
+}
+
+#product_list .list_line_odd {
+  background:   #f8b0f8;
+}
+
+/* START:mainlayout */
+/* Styles for main page */
+
+#banner {
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 960px;
+  height: 115px;
+  margin: auto;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #000;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+#nav{
+width: 960px;
+margin: 0 auto;
+height: 20px;	
+	}
+#nav ul a{text-align: center;color:#fff;text-decoration: none;text-align: center;}
+#nav ul li{
+	
+	float:left;
+	text-align: center;
+	list-style: none;
+	margin-left: 50px;
+	padding-left: 10px;
+	padding-right: 10px;}
+
+
+#nav ul li:hover{color: #999; background-color: #333;text-align: center;}
+
+
+#columns {
+	border-radius:20px;
+	padding: 10px 30px;
+  background: #fff;
+  width: 960px;
+  min-height: 1100px;
+  height: auto;
+  margin:10px auto;
+}
+
+#main {
+  width: 650px;
+  float: left;
+  background-color: #fff;
+}
+#main h1{
+	font-size: 25px;
+	text-align: center;
+	background-color: #999;
+	padding:10px;}
+#side {
+  float: right;
+  width: 300px;
+ 
+color:#333;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+#footer{
+	color: #333;
+	font-size: 12px;
+	width: 960px;
+	margin: 10px auto;
+	height: 50px;
+	text-align: center;}
+	
+	
+	.cart_title{margin-top: 25px;
+		background-color: #333;
+		font-size: 18px;
+		color: #fff;
+		padding: 5px;
+		border-radius:10px;
+		margin-bottom: 10px;}
+	td {
+    padding: 5px;
+    font-size: 12px;
+    border-bottom: 1px dotted #333;
+}
+input[type='submit']{
+	background-color: #333;
+	border-radius:10px;
+	width:150px;
+	color: #fff;
+	float: left;
+	padding: 5px;
+	cursor:progress;}
+	.entry{
+		font-size: 14px;
+		color: #333;
+			position: relative;
+		margin-bottom: 50px;
+		text-align: justify;}
+		.entry img{
+			height: 100px;
+			width: 100px;
+			float: left;
+			margin-right: 20px;
+			border-radius:10px;}
+.price_line{
+	height: 30px;
+	width: 600px;
+	}
+	.price_line span{
+		
+	border-radius:10px;
+	width:120px;
+	color: green;
+	float: left;
+	padding: 10px;}
+	.add{
+		width: 300px;
+		height: 500px;
+		padding-top: 50px;}
+	.add img{
+		width: 280px;
+		float: right;
+		}

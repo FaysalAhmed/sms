@@ -1,17 +1,12 @@
 /* Global styles */
+body{
+background-image: url(../images/back_header.png);	
+	}
+
 #store .entry form, #store .entry form div {
 display: inline;
 }
-.carts {
-  .item_price, .total_line {
-    text-align: right;
-  }
 
- .total_line .total_cell {
-    font-weight: bold;
-    border-top: 1px solid #595;
-  }
-}
 #store #notice {
         color: #000;
         border: 2px solid red;
@@ -108,9 +103,10 @@ display: inline;
   float: left;
   padding-top: 1em;
   padding-left: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   width: 16em;
   background: #141;
+color:#fff;
 }
 
 #side a {

@@ -1,4 +1,5 @@
 class LineItem < ActiveRecord::Base
+  belongs_to :order
   belongs_to :product
   belongs_to :cart
   attr_accessible :cart_id, :product_id
@@ -7,4 +8,3 @@ class LineItem < ActiveRecord::Base
     product.price * quantity
   end
 end
-
