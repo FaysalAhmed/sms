@@ -1,58 +1,95 @@
 
-require 'test_helper'
+class UsersController < ApplicationController
+  # GET /users
+  # GET /users.json
+  def index
+    @users = User.paginate page: params[:page], order: 'created_at desc',
+      per_page: 10
 
-class UsersControllerTest < ActionController::TestCase
-  setup do
-    @input_attributes = {
-      name:                  "sam",
-      password:              "private",
-      password_confirmation: "private"
-    }
-
-    @user = users(:one)
-  end
-
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:users)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  #...
-  test "should create user" do
-    assert_difference('User.count') do
-      post :create, user: @input_attributes
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
     end
-    assert_redirected_to users_path
   end
 
-  test "should show user" do
-    get :show, id: @user
-    assert_response :success
-  end
+  # GET /users/1
+  # GET /users/1.json
+  def show
+    @user = User.find(params[:id])
 
-  test "should get edit" do
-    get :edit, id: @user
-    assert_response :success
-  end
-
-  #...
-  test "should update user" do
-    put :update, id: @user, user: @input_attributes
-    assert_redirected_to users_path
-  end
-
-  test "should destroy user" do
-    assert_difference('User.count', -1) do
-      delete :destroy, id: @user
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user }
     end
+  end
 
-    assert_redirected_to users_path
+  # GET /users/new
+  # GET /users/new.json
+  def new
+    @user = User.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @user }
+    end
+  end
+
+  # GET /users/1/edit
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  # POST /users
+  # POST /users.json
+  def create
+    @user = User.new(params[:user])
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to users_url,
+          notice: "User #{@user.name} was successfully created." }
+        format.json { render json: @user,
+          status: :created, location: @user }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @user.errors,
+          status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /users/1
+  # PUT /users/1.json
+  def update
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to users_url,
+          notice: "User #{@user.name} was successfully updated." }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @user.errors,
+          status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /users/1
+  # DELETE /users/1.json
+  def destroy
+    @user = User.find(params[:id])
+    begin
+      @user.destroy
+      flash[:notice] = "User #{@user.name} deleted"
+    rescue Exception => e
+      flash[:notice] = e.message
+    end
+    respond_to do |format|
+      format.html { redirect_to users_url }
+      format.json { head :no_content }
+    end
   end
 end
 

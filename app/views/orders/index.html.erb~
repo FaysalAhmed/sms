@@ -28,4 +28,11 @@
 <br />
 
 <%= link_to 'New Order', new_order_path %>
-<p><%= will_paginate @orders %></p>
+
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @posts, :container => false %>
+  </div>
+

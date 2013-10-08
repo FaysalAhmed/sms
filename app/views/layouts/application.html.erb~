@@ -8,16 +8,26 @@
 </head>
 <body class="<%= controller.controller_name %>">
 <div id="banner">
-<%= @page_title || "HSTU Books Store Online" %>
+  <%= form_tag store_path, class: 'locale' do %>
+    <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+    <%= submit_tag 'submit' %>
+    <%= javascript_tag "$('.locale input').hide()" %>
+  <% end %>
+  <%= image_tag("logo.png") %>
+  <%= @page_title || t('.title') %>
 </div>
 
 <div id="nav">
 <ul>
-<li><a href="..">All Books</a></li>
-<li><a href="..">About Me</a></li>
-<li><a href="..">Blog and News</a></li>
-<li><a href="..">Contact Me</a></li>
+<li><a href=".."><%= t('.main') %></a></li>
+<li><a href=".."><%= t('.books') %></a></li>
+<li><a href=".."><%= t('.news') %></a></li>
+<li><a href=".."><%= t('.contact') %></a></li>
 </ul>
+
+
+
+
 </div>
 
 <div id="columns">
@@ -31,12 +41,13 @@
     </div>
     <div class="add">
     <% if session[:user_id] %>
+     <h2>Admin Section</h2>
       <ul>
         <li><%= link_to 'Orders', orders_path %></li>
         <li><%= link_to 'Products', products_path %></li>
         <li><%= link_to 'Users', users_path %></li>
       </ul>
-      <%= button_to 'Logout', logout_path, method: :delete
+      <%= button_to 'Logout', logout_path, method: :delete %>
     <% end %>
     
     <%= image_tag("images1.jpeg", :alt => "rss feed") %>

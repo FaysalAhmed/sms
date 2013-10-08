@@ -1,7 +1,12 @@
 /* Global styles */
 body{
 background-image: url(../images/back_header.png);	
+background-repeat: repeat-x;
 	}
+.locale {
+float: right;
+margin: -0.25em 0.1em;
+}
 
 #store .entry form, #store .entry form div {
 display: inline;
@@ -136,7 +141,7 @@ color:#333;
 }
 
 #side a {
-  color: #bfb;
+  color: #333;
   font-size: small;
 }
 #footer{
@@ -163,11 +168,11 @@ color:#333;
 input[type='submit']{
 	background-color: #333;
 	border-radius:10px;
-	width:150px;
+	
 	color: #fff;
 	float: left;
 	padding: 5px;
-	cursor:progress;}
+	cursor:pointer;}
 	.entry{
 		font-size: 14px;
 		color: #333;
@@ -191,11 +196,41 @@ input[type='submit']{
 	color: green;
 	float: left;
 	padding: 10px;}
-	.add{
-		width: 300px;
-		height: 500px;
-		padding-top: 50px;}
+	.add {
+    height: 500px;
+    padding-left: 50px;
+    width: 300px;
+   
+}
+.add h2{
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	border-radius:10px;
+	margin-right: 30px;
+	font-size: 17px;}
 	.add img{
-		width: 280px;
-		float: right;
+		width: 270px;
+		
 		}
+		#cart{
+			padding-left: 30px;
+			margin-bottom: 50px;}
+		.add ul li a{
+			color:#333}
+		.pagination ul li{
+			float:left;
+			list-style: none;
+			padding: 4px;}
+			.pagination li.previous_page a {
+    text-decoration: none !important;
+}
+	.pagination li.next a {
+    text-decoration: none !important;
+}
+.pagination ul li.active a {
+    color: Red;
+    font-size: 20px;
+}
+
+

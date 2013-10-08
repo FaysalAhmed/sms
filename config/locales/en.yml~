@@ -35,7 +35,7 @@ en:
     application:
       title:       "HSTU Online Books Store"
       home:        "Main"
-      books:   "Books"
+      questions:   "Books"
       news:        "News"
       contact:     "Contact"
 #END:layout

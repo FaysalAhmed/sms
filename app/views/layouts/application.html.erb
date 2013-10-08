@@ -8,16 +8,25 @@
 </head>
 <body class="<%= controller.controller_name %>">
 <div id="banner">
-<%= @page_title || "HSTU Books Store Online" %>
+  <%= form_tag store_path, class: 'locale' do %>
+    <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+    <%= submit_tag 'submit' %>
+    <%= javascript_tag "$('.locale input').hide()" %>
+  <% end %>
+  
 </div>
 
 <div id="nav">
 <ul>
-<li><a href="..">All Books</a></li>
-<li><a href="..">About Me</a></li>
-<li><a href="..">Blog and News</a></li>
-<li><a href="..">Contact Me</a></li>
+<li><a href=".."><%= t('.main') %></a></li>
+<li><a href=".."><%= t('.books') %></a></li>
+<li><a href=".."><%= t('.news') %></a></li>
+<li><a href=".."><%= t('.contact') %></a></li>
 </ul>
+
+
+
+
 </div>
 
 <div id="columns">
@@ -31,6 +40,7 @@
     </div>
     <div class="add">
     <% if session[:user_id] %>
+     <h2>Admin Section</h2>
       <ul>
         <li><%= link_to 'Orders', orders_path %></li>
         <li><%= link_to 'Products', products_path %></li>
