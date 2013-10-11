@@ -152,10 +152,12 @@ background: url("website_container.png") repeat-y scroll 0 0 transparent;
   margin-top: -14px;
 }
 #main h1{
-	font-size: 25px;
-	text-align: center;
-	background-color: #999;
-	padding:10px;}
+	background-color: #333;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;}
 #side {
   float: right;
   width: 279px;
