@@ -46,17 +46,18 @@ bn:
 #START:layout
   layouts:
     application:
-      title:       "HSTU boi brikrir Dokan"
-      home:        "Main"
-      books:       "Boi gulu"
-      news:        "Songbad"
-      contact:     "Jogajog"
+      title:       "HSTU বই বিতান"
+      home:        "নীড়পাতা"
+      about:       "ামি কি"
+      books:       "বইগুলো"
+      news:        "সংবাদ"
+      contact:     "যোগাযোগ"
 #END:layout
 
 #START:cart
   carts:
     cart:
-      title:       "HSTU boi brikrir Dokan"
+      title:       ""HSTU বই বিতান""
       empty:       "Cart fakha"
       checkout:    "Taka den"
 #END:cart
@@ -64,7 +65,7 @@ bn:
 #START:main
   store:
     index:
-      title_html:  "HSTU boi brikrir Dokan"
+      title_html:  ""HSTU বই বিতান""
       add_html:    "Cart a joma koren"
 #END:main
 

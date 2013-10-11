@@ -1,6 +1,6 @@
 /* Global styles */
 body{
-background-image: url(../images/back_header.png);	
+background: url(background.png)  #5C5C5C;	
 background-repeat: repeat-x;
 	}
 .locale {
@@ -80,8 +80,8 @@ display: inline;
 /* Styles for main page */
 
 #banner {
+  background: url("website_container.png") repeat-y scroll 0 0 transparent;
   
-  background: url("logo1.png") repeat scroll 0 0 transparent;
     color: #000000;
     font: small-caps 40px/40px "Times New Roman",serif;
     height: 120px;
@@ -89,16 +89,32 @@ display: inline;
     padding-bottom: 10px;
     padding-top: 10px;
     text-align: center;
-    width: 900px;
+    width: 1040px;
 }
 
 #banner img {
   float: left;
+  margin-top: -20px;
 }
+form.locale{
+	margin-right: 60px;
+	}
+#banner h3{
+	color: #fff;
+	float: right;
+	padding-right: 150px;
+	font-size: 20px;
+
+font-style: italic;
+font-weight: normal;
+font-variant: normal;}	
+	
+	
 #nav{
-width: 960px;
+width: 1040px;
 margin: 0 auto;
 height: 20px;	
+background: url("website_container.png") repeat-y scroll 0 0 transparent;
 	}
 #nav ul a{text-align: center;color:#fff;text-decoration: none;text-align: center;}
 #nav ul li{
@@ -106,19 +122,21 @@ height: 20px;
 	float:left;
 	text-align: center;
 	list-style: none;
-	margin-left: 50px;
+	margin-right: 50px;
 	padding-left: 10px;
 	padding-right: 10px;}
 
 
-#nav ul li:hover{color: #999; background-color: #333;text-align: center;}
+#nav ul li a:hover{font-size: 16px;color: #660000;font-weight: bolder;}
+#nav ul li a:active{font-size: 16px;color: #660000;font-weight: bolder;}
 
 
 #columns {
+	background: url("website_container.png") repeat-y scroll 0 0 transparent;
 	border-radius:20px;
 	padding: 10px 30px;
-  background: #fff;
-  width: 960px;
+  
+  width: 980px;
   min-height: 1100px;
   height: auto;
   margin:10px auto;
@@ -127,17 +145,26 @@ height: 20px;
 #main {
   width: 650px;
   float: left;
+  min-height: 1100px;
+  margin-left: 10px;
+  padding-left: 20px;
   background-color: #fff;
+  margin-top: -14px;
 }
 #main h1{
-	font-size: 25px;
-	text-align: center;
-	background-color: #999;
-	padding:10px;}
+	background-color: #333;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;}
 #side {
   float: right;
-  width: 300px;
- 
+  width: 279px;
+  margin-right: 21px;
+  background-color: #fff;
+  min-height: 1100px;
+ margin-top: -14px;
 color:#333;
 }
 
@@ -146,7 +173,7 @@ color:#333;
   font-size: small;
 }
 #footer{
-	color: #333;
+	color: #999;
 	font-size: 12px;
 	width: 960px;
 	margin: 10px auto;

@@ -33,9 +33,9 @@ en:
 #START:layout
   layouts:
     application:
-      title:       "HSTU Online Books Store"
+      title:       "All books from Dinar"
       home:        "Main"
-      questions:   "Books"
+      books:   "Books"
       news:        "News"
       contact:     "Contact"
 #END:layout
