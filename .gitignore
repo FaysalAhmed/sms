@@ -18,6 +18,7 @@
 /public/assets
 .rvmrc
 
+/config/database.yml
 
-
+/Gemfile
 
